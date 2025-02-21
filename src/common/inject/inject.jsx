@@ -267,7 +267,6 @@ Zotero.Inject = {
 		var result = await this.confirm({
 			button1Text: Zotero.getString('general_tryAgain'),
 			button2Text: Zotero.getString('general_cancel'),
-			button3Text: Zotero.getString('error_connection_enableSavingToOnlineLibrary'),
 			title: Zotero.getString('error_connection_isAppRunning', clientName),
 			message: Zotero.getString(
 					'error_connection_save',
