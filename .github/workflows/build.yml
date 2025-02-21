@@ -1,0 +1,37 @@
+name: Build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build extension
+        run: bash -x build.sh -p b
+
+      - name: Build Chrome Connector Zip
+        run: bash -x scripts/chrome/build_zip
+
+      - name: Archive build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: chrome-connector
+          path: dist/*.zip
