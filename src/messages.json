@@ -173,7 +173,7 @@
 		"message": "Is $1 Running?"
 	},
 	"error_connection_save": {
-		"message": "The $1 was unable to communicate with the $2 desktop application. The Connector can save some pages directly to your $3 account, but for best results you should make sure $2 is open before attempting to save.",
+		"message": "The $1 was unable to communicate with the $2 desktop application. Make sure $2 is open before attempting to save.",
 		"description": "$1 will contain the localized string 'Zotero Connector'. $2 will contain the app name. $3 will contain the domain name."
 	},
 	"error_connection_downloadOrTroubleshoot": {
