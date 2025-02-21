@@ -310,9 +310,9 @@ if [[ $BUILD_BROWSER_EXT == 1 ]] || [[ $BUILD_SAFARI == 1 ]]; then
 
 	# Update scripts
 	if [ ! -z $DEBUG ]; then
-		"$GULP" process-custom-scripts --connector-version "$VERSION" > "$LOG" 2>&1
+		"$GULP" process-custom-scripts --connector-version "$VERSION"
 	else
-		"$GULP" process-custom-scripts --connector-version "$VERSION" -p > "$LOG" 2>&1
+		"$GULP" process-custom-scripts --connector-version "$VERSION" -p
 	fi
 fi
 
